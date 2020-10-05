@@ -1,0 +1,14 @@
+.login-area{
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid black;
+    margin-top: 80px;
+}
+.login-area h2, p{
+    text-align: center;
+}
+.img-log{
+    height: 80px;
+    margin-left: 400px;
+}

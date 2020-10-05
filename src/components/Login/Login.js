@@ -1,6 +1,6 @@
   
 import React, { useContext } from "react";
-
+import './Login.css'
 import "firebase/auth";
 import { Button } from "react-bootstrap";
 import * as firebase from "firebase/app";
@@ -8,6 +8,8 @@ import Google from "../../logos/google.png";
 import { useHistory, useLocation } from "react-router-dom";
 import firebaseConfig from "./firebase.config";
 import { UserContext } from "../../App";
+import logo from '../../logos/Group 1329.png';
+
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
@@ -44,13 +46,17 @@ const Login = () => {
   };
 
   return (
+    <>
+    <div>
+        <img src={logo} alt="logo" className="img-log"/>
+    </div>
     <div className="login-area">
-      <h2>Login With</h2>
+      <h2 >Login With</h2>
       <Button
         style={{ borderRadius: "50px" }}
         onClick={handleGoogleSignIN}
-        variant="secondary"
-        size="lg"
+        size="md"
+        variant="white"
         block
       >
         <img height="40px" src={Google} alt="" />
@@ -60,6 +66,7 @@ const Login = () => {
         Don't have an account? <a href="#">Create an account</a>{" "}
       </p>
     </div>
+    </>
   );
 };
 

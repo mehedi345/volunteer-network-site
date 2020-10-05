@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { CategoryContext } from '../../App';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import './Categories.css'

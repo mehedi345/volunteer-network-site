@@ -10,34 +10,39 @@ import {
 
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
-
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Register from './components/Register/Register';
 
 export const UserContext = createContext();
 export const CategoryContext = createContext();
+
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [category, setCategory] = useState({});
+  const [work, setWork] = useState({});
   return (
 
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <CategoryContext.Provider value={[category, setCategory]}>
-    <Router>
-      <Switch>
-        <Route path="/home">
-          <Categories />
-        </Route>
-        <Route exact path="/">
-          <Categories />
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-    </Router>
-    </CategoryContext.Provider>
+      <CategoryContext.Provider value={[work, setWork]}>
+        <Router>
+          <Switch>
+            <Route path="/home">
+              <Categories />
+            </Route>
+            <Route exact path="/">
+              <Categories />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <PrivateRoute path="/register">
+              <Register />
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </Router>
+      </CategoryContext.Provider>
     </UserContext.Provider>
   );
 }
