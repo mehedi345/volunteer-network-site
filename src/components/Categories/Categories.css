@@ -1,0 +1,9 @@
+.display {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .search{
+      width: 300px;
+      border-radius: 10px;
+  }
