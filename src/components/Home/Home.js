@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { CategoryContext } from '../../App';
 import Header from '../Header/Header';
 import './Home.css'
 const Home = (props) => {
+    const {category , setCategory} = useContext(CategoryContext)
     const { img, description } = props.category;
     return (
     
         
         <div className="display">
-            <Card 
+            <Link to = "/register">
+            <Card  
                 style={{
                     width: "14rem",
                     margin: "10px",
                     background: "#421FCF",
                     color: "#fff",
-                }}>
+                }}
+                onClick = { () => setCategory(props.category)}
+                >
                 <Card.Img variant="top" src={img} className="img"/>
                 <Card.Body>
                     <Card.Title>{description}</Card.Title>
                 </Card.Body>
             </Card>
+            </Link>
+            
         </div>
     
     );

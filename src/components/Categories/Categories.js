@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Form, FormControl, InputGroup } from 'react-bootstrap';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import './Categories.css'

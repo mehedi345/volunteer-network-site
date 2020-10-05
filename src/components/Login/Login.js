@@ -1,9 +1,9 @@
   
 import React, { useContext } from "react";
-import * as firebase from "firebase/app";
+
 import "firebase/auth";
 import { Button } from "react-bootstrap";
-import "./login.css";
+import * as firebase from "firebase/app";
 import Google from "../../logos/google.png";
 import { useHistory, useLocation } from "react-router-dom";
 import firebaseConfig from "./firebase.config";

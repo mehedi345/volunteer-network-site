@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 
 import NotFound from './components/NotFound/NotFound';
+import Login from './components/Login/Login';
+
 
 export const UserContext = createContext();
 export const CategoryContext = createContext();
@@ -26,6 +28,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <Categories />
+        </Route>
+        <Route path="/login">
+          <Login/>
         </Route>
         <Route path="*">
           <NotFound />
