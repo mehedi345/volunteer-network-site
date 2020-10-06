@@ -12,6 +12,7 @@ import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
+import EventTask from './components/EventTask/EventTask';
 
 export const UserContext = createContext();
 export const CategoryContext = createContext();
@@ -20,7 +21,6 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   const [work, setWork] = useState({});
   return (
-
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <CategoryContext.Provider value={[work, setWork]}>
         <Router>
@@ -36,6 +36,9 @@ function App() {
             </Route>
             <PrivateRoute path="/register">
               <Register />
+            </PrivateRoute>
+            <PrivateRoute path="/event">
+              <EventTask/>
             </PrivateRoute>
             <Route path="*">
               <NotFound />

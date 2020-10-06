@@ -5,11 +5,11 @@ import { CategoryContext} from '../../App';
 
 import './Home.css'
 const Home = (props) => {
-    const [work , setWork] = useContext(CategoryContext)
+    const [work , setWork] = useContext(CategoryContext);
     const { img, description } = props.category;
+
+   
     return (
-    
-        
         <div className="display">
             <Link to = "/register">
             <Card  
@@ -27,7 +27,6 @@ const Home = (props) => {
                 </Card.Body>
             </Card>
             </Link>
-            
         </div>
     
     );
