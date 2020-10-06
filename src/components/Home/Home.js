@@ -18,12 +18,13 @@ const Home = (props) => {
                     margin: "10px",
                     background: "#421FCF",
                     color: "#fff",
+                    textDecoration: "none"
                 }}
                 onClick = { () => setWork(props.category)}
                 >
                 <Card.Img variant="top" src={img} className="img"/>
-                <Card.Body>
-                    <Card.Title>{description}</Card.Title>
+                <Card.Body style={{textDecoration: "none"}}>
+                    <Card.Title >{description}</Card.Title>
                 </Card.Body>
             </Card>
             </Link>

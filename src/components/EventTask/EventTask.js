@@ -24,7 +24,7 @@ const EventTask = () => {
 
     const deleteProject = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/deleteData/${id}`, {
+        fetch(`https://stark-plains-12330.herokuapp.com/deleteData/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -46,7 +46,7 @@ const EventTask = () => {
                     </Nav>
                         <h5 className="mt-2">{loggedInUser.name}</h5>
                     
-                    <Button variant="dark">Admin</Button>
+                   
                 </Navbar.Collapse>
             </Navbar>
             <Row>

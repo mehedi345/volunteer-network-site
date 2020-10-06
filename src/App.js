@@ -38,9 +38,9 @@ function App() {
             <PrivateRoute path="/register">
               <Register />
             </PrivateRoute>
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
                <Admin/>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/event">
               <EventTask/>
             </PrivateRoute>
