@@ -11,7 +11,7 @@ const EventTask = () => {
     const options = {  day: 'numeric', month: 'long',year: 'numeric' };
 
     useEffect(() => {
-        fetch('http://localhost:5000/user?email='+loggedInUser.email, {
+        fetch(' https://stark-plains-12330.herokuapp.com/user?email='+loggedInUser.email, {
             method: 'GET',
             headers: { 
                 'Content-Type' : 'application/json',
@@ -20,7 +20,7 @@ const EventTask = () => {
         })
         .then(res => res.json())
         .then(data => setItem(data))
-    },[])
+    },[item])
 
     const deleteProject = (id) => {
         console.log(id)

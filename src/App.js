@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 import EventTask from './components/EventTask/EventTask';
+import Admin from './components/Admin/Admin';
 
 export const UserContext = createContext();
 export const CategoryContext = createContext();
@@ -37,6 +38,9 @@ function App() {
             <PrivateRoute path="/register">
               <Register />
             </PrivateRoute>
+            <Route path="/admin">
+               <Admin/>
+            </Route>
             <PrivateRoute path="/event">
               <EventTask/>
             </PrivateRoute>

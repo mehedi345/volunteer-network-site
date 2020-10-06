@@ -15,7 +15,7 @@ const Register = () => {
     const onSubmit = (data) => {
         const newInfo = { ...loggedInUser, ...data, ...work};
        
-        fetch("http://localhost:5000/addInfo", {
+        fetch(" https://stark-plains-12330.herokuapp.com/addInfo", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newInfo),

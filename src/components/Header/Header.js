@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../logos/Group 1329.png';
 
 const Header = () => {
@@ -17,7 +18,7 @@ const Header = () => {
                     </Nav>
                 </Navbar.Collapse>
                 <Button variant="primary" className='mr-2'>Register</Button>
-                <Button variant="dark">Admin</Button>
+                <Link to="/admin"><Button variant="dark">Admin</Button></Link> 
             </Navbar>
         </Container>
       
