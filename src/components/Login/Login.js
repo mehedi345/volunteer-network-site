@@ -36,6 +36,7 @@ const Login = () => {
           photo: photoURL,
         };
         setLoggedInUser(signedInUser);
+        storeAuthToken();
         history.replace(from);
         console.log(displayName, email, photoURL);
       })
@@ -43,8 +44,19 @@ const Login = () => {
         console.log(err);
         console.log(err.message);
       });
-  };
 
+
+  }
+ 
+  const storeAuthToken = () => {
+    firebase.auth().currentUser.getIdToken( true)
+    .then( (idToken) => {
+        sessionStorage.setItem('token', idToken)
+      }).catch( (error) => {
+        
+        console.log(error)
+      }); 
+}
   return (
     <>
     <div>
